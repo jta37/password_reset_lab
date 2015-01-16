@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/login" => "session#new"
   post "/login" => "session#create"
 
+  post "/passwords/:id", to: "passwords#update"
   delete "/logout" => "session#destroy"
   get "/logout" => "session#destroy" #TODO: DELETE THIS BEFORE PRODUCTION
 
